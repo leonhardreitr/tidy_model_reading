@@ -44,3 +44,4 @@ ames |>
   ggtitle("Log")
 p1 / p2
 
+ames$Sale_Price <- log10(ames$Sale_Price)
