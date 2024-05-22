@@ -45,3 +45,13 @@ ames |>
 p1 / p2
 
 ames$Sale_Price <- log10(ames$Sale_Price)
+
+
+
+# Set the random number stream using `set.seed()` so that the results can be 
+# reproduced later. 
+set.seed(502)
+ames_split <- initial_split(ames, prop = 0.80, strata = Sale_Price)
+ames_train <- training(ames_split)
+ames_test  <-  testing(ames_split)
+
